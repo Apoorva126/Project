@@ -1,0 +1,45 @@
+package com.apoo.test;
+
+import static org.junit.Assert.*;
+
+import org.junit.BeforeClass;
+import org.junit.Ignore;
+import org.junit.Test;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.apoo.dao.UserDAO;
+import com.apoo.model.UserDetail;
+
+public class UserTestCase {
+
+static UserDAO userDao;
+	
+	@BeforeClass
+	public static void executeFirst()
+	{
+		AnnotationConfigApplicationContext context=new AnnotationConfigApplicationContext();
+	    
+	    context.scan("com.apoo");
+	    context.refresh();
+	    
+	    userDao=(UserDAO)context.getBean("userDao");
+	}
+	
+	@Ignore
+	@Test
+	public void registerUserTest() 
+	{
+		UserDetail user=new UserDetail();
+		
+		user.setUsername("apoorva");
+		user.setPassword("apoorva124");
+		user.setRole("ROLE_ADMIN");
+		user.setEnabled(true);
+		user.setCustomerName("Apoorva Srivastava");
+		user.setCustomerAddr("Ghaziabad");
+		
+		assertTrue("Problem in adding User:",userDao.registerUser(user));
+	}
+}
+
+

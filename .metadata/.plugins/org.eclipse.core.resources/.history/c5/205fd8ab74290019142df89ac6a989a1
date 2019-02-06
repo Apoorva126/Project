@@ -1,0 +1,13 @@
+package com.apoo.dao;
+
+import java.util.List;
+
+import com.apoo.model.Category;
+
+public class CategoryDao {
+	 public boolean addingCategory(Category category);
+	   public boolean deletingCategory(Category category);
+	   public boolean updatingCategory(Category category);
+	   public List<Category> listCategories();
+	   public Category getCategory(int categoryID);
+}

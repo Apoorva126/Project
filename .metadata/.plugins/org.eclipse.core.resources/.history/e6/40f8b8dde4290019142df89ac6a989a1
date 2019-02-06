@@ -1,0 +1,5 @@
+package com.apoo.daoimpl;
+
+public class SupplierDAOImpl {
+
+}

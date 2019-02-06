@@ -1,0 +1,51 @@
+<%@ page language="java" contentType="text/html"%>
+<%@include file="Header.jsp"%>
+    
+<html>
+<head>
+<title>Signup</title>
+<Script>
+function clickme()
+{
+var a=document.getElementById("N").value;
+var b=document.getElementById("P").value;
+var cp=document.getElementById("C").value;
+alert(a);
+if(cp==b){
+alert("Password match");
+}
+else{
+
+alert("Password not match");
+}
+var m=document.getElementById("A").value;
+alert(m);
+var n=document.getElementById("B").value;
+if(n<18)
+{
+alert("under age");
+}
+else
+{
+alert("allowed")}
+}
+</Script>
+</head>
+<body>
+<center>
+<table>
+<form>
+<tr><td>Name:</td><td><input type="text" id="N" placeholder="please enter Name" /></td></tr>
+<tr><td>Password:</td><td><input type="password" id="P" placeholder="please enter password" /></td></tr> 
+<tr><td>Confirm Password:</td><td><input type="password" id="C" placeholder="please reenter password /></td></tr>
+<tr><td>Gender:</td><td><input type="radio" name="g"/>male
+<input type="radio" name="g"/>female</td></tr>
+<tr><td>City:</td><td><select name="City" id="A"><option value="select">Select City</option><option value="Delhi">Delhi</option><option value="Ghaziabad">Ghaziabad</option><option value="Lucknow">Lucknow</option><option value="Chennai">Chennai</option></td></tr>
+<tr><td>Age</td><td><input type="number" id="B" placeholder="please enter your age"/></td></tr>
+<tr><td><input type="Submit" value="Save" onclick="clickme()"/></tr></td>
+
+</form>
+</table>
+</center>
+</body>
+</html>

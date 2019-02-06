@@ -1,0 +1,23 @@
+<%@ page language="java" contentType="text/html"%>
+  <%@include file="Header.jsp" %>
+<html>
+<head>
+
+<center>
+<h2 style="background-color: red;">
+Contact Us:
+</h2>
+</center>
+</head>
+
+<body>
+
+<center>
+<form style="background-color: yellow;">
+<h6>Email:baazarindia@gmail.com</h6>
+<h6>Contact Number:+91-9999911111</h6>
+
+</form>
+</center>
+</body>
+</html>

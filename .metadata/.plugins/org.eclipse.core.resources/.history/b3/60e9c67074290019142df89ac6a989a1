@@ -1,0 +1,5 @@
+package com.apoo.dao;
+
+public class CategoryDao {
+
+}

@@ -1,0 +1,14 @@
+package com.apoo.controller;
+
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+public class PageController {
+	@RequestMapping("/login")
+	public String showLogin(Model mv)
+	{
+		mv.addAttribute("pageinfo","Login");
+		return "Login";
+	}
+	
+}
