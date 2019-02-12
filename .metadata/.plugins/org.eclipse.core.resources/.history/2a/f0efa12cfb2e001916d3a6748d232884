@@ -1,0 +1,91 @@
+package com.apoo.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.apoo.dao.ProductDAO;
+import com.apoo.model.Product;
+@Controller
+public class ProductController {
+	
+	@Autowired
+	ProductDAO productDAO; 
+	
+	
+	@RequestMapping("/product")
+	public ModelAndView showProduct()
+	{	ModelAndView m = new ModelAndView();
+	List<Product> listProducts =productDAO.listProducts();
+	
+	m.addObject("listProducts", listProducts);
+	m.setViewName("Product");
+	return m;
+	
+		}
+
+@PostMapping(value="/addProduct")
+public String addProduct(Model m, @RequestParam("proName")String ProductName,@RequestParam("proDesc")String ProductDesc)
+		{
+	Product product=new Product();
+	product.setProductName(ProductName);
+	product.setProductDesc(ProductDesc);
+	productDAO.addProduct(product); 
+	List<Product>listProducts=productDAO.listProducts();
+	m.addAttribute("listProducts", listProducts);
+	
+	
+	m.addAttribute("pageinfo", "Manage Product ");
+return "Product";
+		}
+@PostMapping(value="/UpdateProduct")
+public String UpdateCategory(Model m, @RequestParam("proId")int ProductID,  @RequestParam("proName")String ProductName,@RequestParam("proDesc")String ProductDesc)
+		{
+	Product product=productDAO.getProduct(ProductID);
+	product.setProductName(ProductName);
+	product.setProductDesc(ProductDesc);
+	productDAO.updateProduct(product);
+	
+	List<Product>listProducts=productDAO.listProducts();
+	m.addAttribute("listProducts", listProducts);
+	
+	
+	m.addAttribute("pageinfo", "Manage Product ");
+return "Product";
+	 	}
+
+
+@RequestMapping(value="/deleteProduct/{productID}")
+public String deleteProduct(Model m, @PathVariable("productID")int productID)
+{
+	Product product=productDAO.getProduct(productID);
+	productDAO.deleteProduct(product);
+	
+	List<Product>listProducts=productDAO.listProducts();
+	m.addAttribute("listProducts", listProducts);
+	
+	m.addAttribute("pageinfo", "Manage Product");
+	return "Product";
+}
+@RequestMapping(value="/editProduct/{productID}")
+public String editCategory(Model m, @PathVariable("productID")int productID)
+{
+	Product product=productDAO.getProduct(productID);
+	m.addAttribute("product", product);
+	
+	m.addAttribute("pageinfo", "Manage Product");
+	return "UpdateProduct";
+
+}
+}
+
+	
+
+

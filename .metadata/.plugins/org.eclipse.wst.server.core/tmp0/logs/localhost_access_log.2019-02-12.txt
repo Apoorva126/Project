@@ -118,3 +118,8 @@
 0:0:0:0:0:0:0:1 - - [12/Feb/2019:23:48:58 +0530] "GET /FrontEndBaazarIndia/home HTTP/1.1" 404 992
 0:0:0:0:0:0:0:1 - - [12/Feb/2019:23:49:00 +0530] "GET /FrontEndBaazarIndia/main.css HTTP/1.1" 404 992
 0:0:0:0:0:0:0:1 - - [12/Feb/2019:23:49:02 +0530] "GET /FrontEndBaazarIndia/main.css HTTP/1.1" 404 992
+127.0.0.1 - - [12/Feb/2019:23:58:30 +0530] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [12/Feb/2019:23:58:32 +0530] "GET /FrontEndBaazarIndia/ HTTP/1.1" 200 1460
+0:0:0:0:0:0:0:1 - - [12/Feb/2019:23:58:33 +0530] "GET /FrontEndBaazarIndia/main.css HTTP/1.1" 404 992
+0:0:0:0:0:0:0:1 - - [12/Feb/2019:23:58:39 +0530] "GET /FrontEndBaazarIndia/product HTTP/1.1" 200 2303
+0:0:0:0:0:0:0:1 - - [12/Feb/2019:23:58:39 +0530] "GET /FrontEndBaazarIndia/main.css HTTP/1.1" 404 992
