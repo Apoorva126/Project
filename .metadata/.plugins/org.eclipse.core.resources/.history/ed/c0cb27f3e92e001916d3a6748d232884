@@ -1,0 +1,36 @@
+package com.apoo.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class PageController 
+{
+
+	@RequestMapping("/login")
+	public String showLogin()
+	{
+		return "Login";
+	}
+	@RequestMapping("/aboutUs")
+	public String showAboutUs()
+	{
+		return "AboutUs";
+	}
+	@RequestMapping("/home")
+	public String showHome()
+	{
+	
+		return "Home";
+		
+	}
+	@RequestMapping("/contactus")
+	public String showContactUs()
+	{
+		
+		return "ContactUs";
+		
+	}
+	
+
+}
