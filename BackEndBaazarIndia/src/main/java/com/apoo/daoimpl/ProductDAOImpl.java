@@ -19,7 +19,7 @@ public class ProductDAOImpl implements ProductDAO {
 
 	@Autowired
 	SessionFactory sessionFactory;
-	@Override
+	
 	public boolean addProduct(Product product) {
 		try
 		{
@@ -32,7 +32,7 @@ public class ProductDAOImpl implements ProductDAO {
 		}
 	}
 
-	@Override
+	
 	public boolean deleteProduct(Product product) {
 		try
 		{
@@ -45,7 +45,7 @@ public class ProductDAOImpl implements ProductDAO {
 		}
 	}
 
-	@Override
+	
 	public boolean updateProduct(Product product) {
 		try
 		{
@@ -58,7 +58,7 @@ public class ProductDAOImpl implements ProductDAO {
 		}
 	}
 
-	@Override
+
 	public List<Product> listProducts() {
 		Session session=sessionFactory.openSession();
 		Query query=session.createQuery("from Product");
@@ -67,7 +67,7 @@ public class ProductDAOImpl implements ProductDAO {
 		return listProducts;
 	}
 
-	@Override
+
 	public Product getProduct(int productID) {
 		Session session=sessionFactory.openSession();
 		Product product=session.get(Product.class, productID);

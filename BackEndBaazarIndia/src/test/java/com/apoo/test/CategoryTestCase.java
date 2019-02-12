@@ -43,8 +43,8 @@ public void deleteCategoryTest()
 public void updateCategoryTest()
 {
 	Category category=categoryDAO.getCategory(40);
-	category.setCategoryDesc("Window 7");
-	assertTrue("Problem in Updating category",categoryDAO.updateCategory(category));
+	//category.setCategoryDesc("Window 7");
+	//assertTrue("Problem in Updating category",categoryDAO.updateCategory(category));
 	
 	}
 

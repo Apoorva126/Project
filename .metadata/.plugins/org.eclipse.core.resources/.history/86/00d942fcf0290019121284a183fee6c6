@@ -1,5 +1,0 @@
-package com.apoo.dao;
-
-public interface UserDAO {
-
-}

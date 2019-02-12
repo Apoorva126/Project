@@ -18,7 +18,7 @@ public class UserDAOImpl implements UserDAO {
 	@Autowired
 	SessionFactory sessionFactory;
 
-	@Override
+	
 	public boolean registerUser(UserDetail user) {
 		try
 		{
@@ -31,7 +31,7 @@ public class UserDAOImpl implements UserDAO {
 		}
 	}
 
-	@Override
+	
 	public boolean updateAddress(UserDetail user) {
 		try
 		{
@@ -44,7 +44,7 @@ public class UserDAOImpl implements UserDAO {
 		}
 	}
 
-	@Override
+
 	public UserDetail getUser(String username) {
 		Session session=sessionFactory.openSession();
 		UserDetail user=session.get(UserDetail.class, username);

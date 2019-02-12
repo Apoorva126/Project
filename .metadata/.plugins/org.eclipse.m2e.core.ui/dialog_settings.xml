@@ -31,6 +31,23 @@
 		<list key="issueManagementUrl">
 		</list>
 	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="E:\Project\BackEndBaazarIndia"/>
+			<item value="E:\Project\Project-master\BackEndBaazarIndia"/>
+			<item value="C:\Users\Aviriti Srivastava\Downloads\DT-Project-master"/>
+			<item value="E:\Project"/>
+			<item value="C:\DT-Project-master"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
 	<section name="MavenProjectWizardArchetypePage">
 		<item value="All Catalogs" key="catalog"/>
 		<list key="projectNameTemplate">
@@ -44,9 +61,9 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
-			<item value="E:\Project\BackEndBaazarIndia\src\test\java\com\apoo\test\UserTestCase.java"/>
-			<item value="E:\Project\BaazarIndiaFrontEnd"/>
 			<item value="E:\Project"/>
+			<item value="E:\Project\BaazarIndiaFrontEnd"/>
+			<item value="E:\Project\BackEndBaazarIndia\src\test\java\com\apoo\test\UserTestCase.java"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -59,18 +76,20 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.apoo.FrontEndBazaarIndia"/>
 			<item value="com.apoo.FrontEndBaazarIndia"/>
-			<item value="com.apoo.BackEndBaazarIndia"/>
 			<item value="com.apoo.BaazarIndiaFrontEnd"/>
+			<item value="com.apoo.BackEndBaazarIndia"/>
 			<item value="com.apoo.BaazarIndia"/>
 		</list>
 		<list key="groupId">
 			<item value="com.apoo"/>
 		</list>
 		<list key="artifactId">
+			<item value="FrontEndBazaarIndia"/>
 			<item value="FrontEndBaazarIndia"/>
-			<item value="BackEndBaazarIndia"/>
 			<item value="BaazarIndiaFrontEnd"/>
+			<item value="BackEndBaazarIndia"/>
 			<item value="BaazarIndia"/>
 		</list>
 		<list key="projectNameTemplate">

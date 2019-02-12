@@ -1,7 +1,0 @@
-package com.apoo.test;
-
-import junit.framework.TestCase;
-
-public class CategoryTestCase extends TestCase {
-
-}

@@ -1,9 +1,0 @@
-package com.apoo.dao;
-
-import java.util.List;
-
-import com.apoo.model.Category;
-
-public class CategoryDao {
-	 public boolean addCategory()
-}

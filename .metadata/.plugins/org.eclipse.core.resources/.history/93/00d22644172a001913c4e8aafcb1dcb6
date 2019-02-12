@@ -1,8 +1,0 @@
-<%@ page language="java" contentType="text/html"%>
-  <%@include file="/WEB-INF/views/Header.jsp" %>
-
-
-<marquee><h2>Baazar India</h2></marquee>
-
-</body>
-</html>
